@@ -1,0 +1,37 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body style="background-image:url('static/images/background1.jpg');background-size:cover;background-position: right top;">
+    
+    <div class="header">
+        <img src="static/images/logo.png" style="float:left;"><br><br>
+        <h1 style="float:right; margin-right:30px; color:rgb(0, 0, 153);font-size:40px;font-weight: bold;" >Sentiment Analysis Classifier</h1>
+    </div>
+    
+    <br><br><br><br><br><br><br><br>
+    
+    <div class ="form">
+        <center>
+        <form method="POST" action={{url_for("predict")}} style="background:rgba(0,0,0,0.3); width:65%;height:150px;">
+            <br><br><br>
+            <label style="font-weight:bold;font-size:22px;color:rgb(255, 255, 255);">Enter the sentence :</label>
+            <input type="text" name="sentence" placeholder="Enter the sentence here for sentiment analysis" required size="80" >
+
+            <br><br>
+
+            <input type="submit" value="Predict">
+        </form></center>
+        <br><br>
+        
+        </div>
+		
+            <div class="result">
+        <center>
+            <img src="{{result_image_url}}"  style="width:300px;height:300px;display:{{result_image_display}};">
+	<center>        
+</div>
+    
+</body>
+    </html>
